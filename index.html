@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Find the Best Course for You! 🎓</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Enter Your Academic Details</h2>
+            <form action="/recommend" method="post">
+                <label for="gre">GRE Score:</label>
+                <input type="number" id="gre" name="gre" required>
+                <p class="desc">Graduate Record Examination (GRE) score, usually between 260-340.</p>
+
+                <label for="toefl">TOEFL Score:</label>
+                <input type="number" id="toefl" name="toefl" required>
+                <p class="desc">Test of English as a Foreign Language (TOEFL) score, ranges from 0-120.</p>
+
+                <label for="cgpa">CGPA:</label>
+                <input type="number" step="0.01" id="cgpa" name="cgpa" required>
+                <p class="desc">Cumulative Grade Point Average (CGPA), usually on a 10-point scale.</p>
+
+                <button type="submit">Get Course Recommendations</button>
+            </form>
+        </section>
+
+        <section class="results">
+            {% if recommendations %}
+                <h2>Recommended Courses for You 📚</h2>
+                <ul>
+                    {% for course in recommendations %}
+                        <li>{{ course }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </section>
+    </main>
+
+</body>
+</html>
