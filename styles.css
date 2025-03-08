@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI-Powered Course Recommendation</h1>
+        <p>Get personalized course suggestions based on your profile!</p>
+    </header>
+
+    <section id="user-input">
+        <h2>Enter Your Details</h2>
+        <input type="number" id="gre" placeholder="GRE Score">
+        <input type="number" id="toefl" placeholder="TOEFL Score">
+        <input type="number" id="cgpa" placeholder="CGPA">
+        <button onclick="recommendCourses()">Get Recommendations</button>
+    </section>
+
+    <section id="course-results">
+        <h2>Recommended Courses</h2>
+        <div id="courses-container">
+            <!-- Courses will be displayed here -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
