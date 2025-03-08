@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Course Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI-Powered Course Recommendation</h1>
+        <p>Get personalized course suggestions based on your profile!</p>
+    </header>
+
+    <section id="user-input">
+        <h2>Enter Your Details</h2>
+
+        <label for="gre"><strong>GRE Score:</strong> (0 - 340)</label>
+        <p>The Graduate Record Examination (GRE) is a standardized test required for admission to many graduate programs worldwide.</p>
+        <input type="number" id="gre" placeholder="Enter GRE Score">
+
+        <label for="toefl"><strong>TOEFL Score:</strong> (0 - 120)</label>
+        <p>The Test of English as a Foreign Language (TOEFL) measures your ability to use and understand English in academic settings.</p>
+        <input type="number" id="toefl" placeholder="Enter TOEFL Score">
+
+        <label for="cgpa"><strong>CGPA:</strong> (0 - 10)</label>
+        <p>Cumulative Grade Point Average (CGPA) represents your overall academic performance on a scale of 10.</p>
+        <input type="number" id="cgpa" placeholder="Enter CGPA">
+
+        <button onclick="getRecommendations()">Get Recommendations</button>
+    </section>
+
+    <section id="course-results">
+        <h2>Recommended Courses</h2>
+        <div id="courses-container">
+            <!-- Results will be displayed here -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
